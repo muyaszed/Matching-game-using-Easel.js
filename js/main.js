@@ -1,15 +1,33 @@
-var squarHeight = 200;
-var squareWidth = 200;
+var squarHeight = 100;
+var squareWidth = 100;
 var squareGap = 10;
-var column = 3;
-var row = 2;
+var column = 4;
+var row = 5;
 
 function init() {
 	var stage = new createjs.Stage("myCanvas");
 	var square;
+	var totalTiles = column*row;
+	// var positionX =0;
+	// var positionY = 0;
+//alternative algorithm for square rendering using mutlidimensional array
+	// for(i=0;i<row;i++) {
+	// 	for(j=0;j<column;j++) {
+			
+	// 		square = drawSquare();
+	// 		square.x = positionX;
+	// 		square.y = positionY;
+	// 		stage.addChild(square);
+	// 		stage.update();
+	// 		positionX += squareWidth+squareGap;
+	// 		console.log(positionX);
+	// 	}
+	// 	positionX = 0;
+	// 	positionY += squarHeight+squareGap;
+	// }
 	
 
-	for(i=0; i < column*row; i++) {
+	for(i=0; i < totalTiles; i++) {
 		
 		square = drawSquare();
 		square.x = (squareWidth+squareGap)*(i%column);
